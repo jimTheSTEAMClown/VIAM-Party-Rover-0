@@ -1,0 +1,159 @@
+{
+  "components": [
+    {
+      "depends_on": [],
+      "model": "pi",
+      "name": "local",
+      "type": "board",
+      "attributes": {
+        "digital_interrupts": [
+          {
+            "name": "re",
+            "pin": "37"
+          },
+          {
+            "name": "le",
+            "pin": "35"
+          }
+        ]
+      }
+    },
+    {
+      "model": "gpio",
+      "name": "right",
+      "type": "motor",
+      "attributes": {
+        "board": "local",
+        "encoder": "Renc",
+        "min_power_pct": 0.3,
+        "pins": {
+          "pwm": "22",
+          "a": "16",
+          "b": "18"
+        },
+        "ticks_per_rotation": 996
+      },
+      "depends_on": [
+        "local",
+        "Renc"
+      ]
+    },
+    {
+      "attributes": {
+        "encoder": "Lenc",
+        "min_power_pct": 0.3,
+        "pins": {
+          "b": "13",
+          "pwm": "15",
+          "a": "11"
+        },
+        "ticks_per_rotation": 996,
+        "board": "local"
+      },
+      "depends_on": [
+        "local",
+        "Lenc"
+      ],
+      "model": "gpio",
+      "name": "left",
+      "type": "motor"
+    },
+    {
+      "type": "base",
+      "attributes": {
+        "wheel_circumference_mm": 217,
+        "width_mm": 260,
+        "left": [
+          "left"
+        ],
+        "right": [
+          "right"
+        ],
+        "spin_slip_factor": 1.76
+      },
+      "depends_on": [
+        "left",
+        "right",
+        "local"
+      ],
+      "model": "wheeled",
+      "name": "viam_base"
+    },
+    {
+      "depends_on": [
+        "local"
+      ],
+      "model": "webcam",
+      "name": "cam",
+      "type": "camera",
+      "attributes": {
+        "video_path": "/dev/cams/cam0",
+        "debug": true
+      }
+    },
+    {
+      "attributes": {
+        "board": "local",
+        "pins": {
+          "i": "re"
+        }
+      },
+      "depends_on": [
+        "local"
+      ],
+      "model": "single",
+      "name": "Renc",
+      "type": "encoder"
+    },
+    {
+      "depends_on": [
+        "local"
+      ],
+      "model": "single",
+      "name": "Lenc",
+      "type": "encoder",
+      "attributes": {
+        "pins": {
+          "i": "le"
+        },
+        "board": "local"
+      }
+    },
+    {
+      "attributes": {},
+      "depends_on": [],
+      "model": "webgamepad",
+      "name": "WebGamepad",
+      "type": "input_controller"
+    }
+  ],
+  "services": [
+    {
+      "name": "base_rc",
+      "type": "base_remote_control",
+      "attributes": {
+        "control_mode": "joystickControl",
+        "input_controller": "WebGamepad",
+        "base": "viam_base"
+      },
+      "depends_on": [
+        "viam_base",
+        "WebGamepad"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "address": "octagon-1-main.jcdlnluk0p.local.viam.cloud:8080",
+      "auth": {
+        "entity": "octagon-1-main.jcdlnluk0p.local.viam.cloud",
+        "credentials": {
+          "type": "api-key",
+          "payload": "vCbJTj9NscAqgJiQulBmoUSgLMyfIGkiE2ntdIac"
+        }
+      },
+      "insecure": false,
+      "name": "overhead-cam"
+    }
+  ]
+}
