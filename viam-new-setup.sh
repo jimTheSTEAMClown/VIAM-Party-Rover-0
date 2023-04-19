@@ -11,6 +11,16 @@ echo "-------------------------------------------------------"
 echo " Installing curl"
 echo "-------------------------------------------------------"
 sudo apt install curl -y
+echo "-------------------------------------------------------"
+echo "The UPGRADE will say:"
+echo "   The following package was automatically installed"
+RED_FG=`tput setaf 1`
+GREEN_BG=`tput setab 2`
+RESET=`tput sgr0`
+echo "    ${RED_FG}${GREEN_BG}and is no longer required: libfuse3-3${RESET}"
+echo "    ${RED_FG}${GREEN_BG}and to use: 'sudo apt autoremove' to remove it.${RESET}"
+echo "DO NOT DO REMOVE IT.  Looks like viam-server needs it"
+echo "-------------------------------------------------------"
 uname -m
 echo "-------------------------------------------------------"
 echo " Setting up the vial-server - this service will run on bootup."
