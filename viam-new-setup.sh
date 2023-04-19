@@ -1,4 +1,4 @@
-#1 /bin/bash
+#! /bin/bash
 # https://docs.viam.com/installation/#detailed-installation-instructions
 cd 
 pwd
