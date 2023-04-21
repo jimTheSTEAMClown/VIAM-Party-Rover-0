@@ -19,7 +19,7 @@ GREEN_BG=`tput setab 2`
 RESET=`tput sgr0`
 echo "    ${RED_FG}${GREEN_BG}and is no longer required: libfuse${RESET}"
 echo "    ${RED_FG}${GREEN_BG}and to use: 'sudo apt autoremove' to remove it.${RESET}"
-echo "${RED_FG}$(tput setaf blink)DO NOT DO REMOVE IT.${RESET}  Looks like viam-server needs it"
+echo "${RED_FG}DO NOT DO REMOVE IT.${RESET}  Looks like viam-server needs it"
 echo "-------------------------------------------------------"
 uname -m
 echo "-------------------------------------------------------"
