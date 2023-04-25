@@ -55,7 +55,7 @@ echo "wget -O rover_image_build_64bit.sh https://raw.githubusercontent.com/jimTh
 echo "sudo chmod 744 rover_image_build_64bit.sh"
 echo "----------------------------------------------------"
 echo " "
-sudo wget -O rover_image_build_64bit.sh https://raw.githubusercontent.com/jimTheSTEAMClown/VIAM-Party-Rover-0/main/rover_image_build_64bit.sh
+wget -O rover_image_build_64bit.sh https://raw.githubusercontent.com/jimTheSTEAMClown/VIAM-Party-Rover-0/main/rover_image_build_64bit.sh
 sudo chmod 744 rover_image_build_64bit.sh
 echo " "
 echo "----------------------------------------------------"
@@ -69,7 +69,7 @@ echo "wget -O viam-new-setup.sh https://raw.githubusercontent.com/jimTheSTEAMClo
 echo "sudo chmod 744 viam-new-setup.sh"
 echo "----------------------------------------------------"
 echo " "
-sudo wget -O viam-new-setup.sh https://raw.githubusercontent.com/jimTheSTEAMClown/VIAM-Party-Rover-0/main/viam-new-setup.sh
+wget -O viam-new-setup.sh https://raw.githubusercontent.com/jimTheSTEAMClown/VIAM-Party-Rover-0/main/viam-new-setup.sh
 sudo chmod 744 viam-new-setup.sh
 echo " "
 echo "----------------------------------------------------"
