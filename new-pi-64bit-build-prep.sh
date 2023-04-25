@@ -28,7 +28,7 @@ pwd
 ls -l
 
 echo "----------------------------------------------------"
-echo "Running Update"
+echo "Running Update" $ sudo apt update
 echo "----------------------------------------------------"
 echo " "
 sudo apt update
@@ -39,7 +39,7 @@ echo "----------------------------------------------------"
 echo " "
 
 echo "----------------------------------------------------"
-echo "Running Upgrade with -y"
+echo "Running Upgrade with -y"  $ sudo apt upgrade -y
 echo "----------------------------------------------------"
 echo " "
 sudo apt upgrade -y
@@ -52,7 +52,7 @@ echo " "
 echo "----------------------------------------------------"
 echo "copying github shell script to install basic tools and apps "
 echo "wget -O rover_image_build_64bit.sh https://raw.githubusercontent.com/jimTheSTEAMClown/VIAM-Party-Rover-0/main/rover_image_build_64bit.sh"
-echo "sudo chmod 744 rover_image_build_64bit.sh"
+echo "chmod 744 rover_image_build_64bit.sh"
 echo "----------------------------------------------------"
 echo " "
 wget -O rover_image_build_64bit.sh https://raw.githubusercontent.com/jimTheSTEAMClown/VIAM-Party-Rover-0/main/rover_image_build_64bit.sh
