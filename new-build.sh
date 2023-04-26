@@ -108,6 +108,6 @@ echo " "
 # echo " Run the following scripts"
 # echo " ./rover_image_build_64bit.sh "
 # echo " ./viam-new-setup.sh "
-echo " Go to https://app.viam.com/robots
+echo " Go to https://app.viam.com/robots"
 echo " "
 echo "All Done"
