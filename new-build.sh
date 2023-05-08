@@ -51,6 +51,19 @@ echo " "
 
 echo "----------------------------------------------------"
 echo "copying github shell script to install basic tools and apps "
+echo "wget -O rpi_set_preferences.sh https://github.com/jimTheSTEAMClown/RaspberryPi/blob/master/rpi_set_preferences.sh"
+echo "----------------------------------------------------"
+echo " "
+wget -O rpi_set_preferences.sh https://github.com/jimTheSTEAMClown/RaspberryPi/blob/master/rpi_set_preferences.sh
+chmod 744 rpi_set_preferences.sh
+echo " "
+echo "----------------------------------------------------"
+echo "Done copying & setting permissions to 744 for: rpi_set_preferences.sh"
+echo "----------------------------------------------------"
+echo " "
+
+echo "----------------------------------------------------"
+echo "copying github shell script to install basic tools and apps "
 echo "wget -O rover_image_build_64bit.sh https://raw.githubusercontent.com/jimTheSTEAMClown/VIAM-Party-Rover-0/main/rover_image_build_64bit.sh"
 echo "chmod 744 rover_image_build_64bit.sh"
 echo "----------------------------------------------------"
@@ -88,9 +101,11 @@ echo " Copied and set permissions for rover_image_build_64bit.sh"
 ls -l rover_image_build_64bit.sh
 echo " Copied and set permissions for viam-new-setup.sh"
 ls -l viam-new-setup.sh
+echo " Copied and set permissions for viam-new-setup.sh"
+ls -l rpi_set_preferences.sh
 
-./rover_image_build_64bit.sh
-./viam-new-setup.sh
+#./rover_image_build_64bit.sh
+#./viam-new-setup.sh
 
 echo " "
 echo "-------------------------------------------------------"
@@ -111,3 +126,6 @@ echo " "
 echo " Go to https://app.viam.com/robots"
 echo " "
 echo "All Done"
+echo "REBOOTING IN 20 Seconds"
+sleep 20
+./rpi_set_preference.sh
