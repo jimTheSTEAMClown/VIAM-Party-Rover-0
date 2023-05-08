@@ -126,6 +126,8 @@ echo " "
 echo " Go to https://app.viam.com/robots"
 echo " "
 echo "All Done"
+./rover_image_build_64bit.sh
+./viam-new-setup.sh
 echo "REBOOTING IN 20 Seconds"
 sleep 20
-./rpi_set_preference.sh
+./rpi_set_preferences.sh
