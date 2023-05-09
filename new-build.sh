@@ -51,10 +51,10 @@ echo " "
 
 echo "----------------------------------------------------"
 echo "copying github shell script to install basic tools and apps "
-echo "wget -O rpi_set_preferences.sh https://github.com/jimTheSTEAMClown/RaspberryPi/blob/master/rpi_set_preferences.sh"
+echo "wget -O rpi_set_preferences.sh https://raw.githubusercontent.com/jimTheSTEAMClown/RaspberryPi/master/rpi_set_preferences.sh"
 echo "----------------------------------------------------"
 echo " "
-wget -O rpi_set_preferences.sh https://github.com/jimTheSTEAMClown/RaspberryPi/blob/master/rpi_set_preferences.sh
+wget -O rpi_set_preferences.sh https://raw.githubusercontent.com/jimTheSTEAMClown/RaspberryPi/master/rpi_set_preferences.sh
 chmod 744 rpi_set_preferences.sh
 echo " "
 echo "----------------------------------------------------"
