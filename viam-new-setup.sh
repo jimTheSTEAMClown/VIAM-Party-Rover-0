@@ -23,6 +23,11 @@ echo "${RED_FG}DO NOT DO REMOVE IT.${RESET}  Looks like viam-server needs it"
 echo "-------------------------------------------------------"
 uname -m
 echo "-------------------------------------------------------"
+echo " Installing libfuse2"
+echo "-------------------------------------------------------"
+sudo apt install libfuse2 -y
+
+echo "-------------------------------------------------------"
 echo " Setting up the vial-server - this service will run on bootup."
 echo "-------------------------------------------------------"
 curl http://packages.viam.com/apps/viam-server/viam-server-stable-aarch64.AppImage -o viam-server &&
