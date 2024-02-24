@@ -30,8 +30,8 @@ sudo apt install libfuse2 -y
 echo "-------------------------------------------------------"
 echo " Setting up the vial-server - this service will run on bootup."
 echo "-------------------------------------------------------"
-curl http://packages.viam.com/apps/viam-server/viam-server-stable-aarch64.AppImage -o viam-server &&
-  chmod 755 viam-server && sudo ./viam-server --aix-install
+sudo curl -H "key_id:c4446458-c734-4c3a-b210-f63b118853fa" -H "key:mo5viwfzseg3wkp23fpy0ci73lroqznd" "https://app.viam.com/api/json1/config?id=a4d1fc84-19c3-4286-9fec-1d09113da90a&client=true" -o /etc/viam.json
+curl https://storage.googleapis.com/packages.viam.com/apps/viam-server/viam-server-stable-aarch64.AppImage -o viam-server && chmod 755 viam-server && sudo ./viam-server --aix-install
 echo "-------------------------------------------------------"
 echo " Starting the viam-server"
 echo "-------------------------------------------------------"
