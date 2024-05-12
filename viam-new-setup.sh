@@ -23,8 +23,6 @@ echo "VIAM New Build / Update Script"
 echo "----------------------------------------------------"
 echo " "
 pwd
-# ls -l
-ls
 echo " "
 echo "----------------------------------------------------"
 echo "Do you wish run the VIAM New Build / Update Script?"
@@ -157,6 +155,7 @@ echo "----------------------------------------------------"
 echo "Here is some information about you "
 echo $USER
 uname -m
+ls -la
 # Listing Apps
 echo "listing the location of the installed Apps"
 which curl
