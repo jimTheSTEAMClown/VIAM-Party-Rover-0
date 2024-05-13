@@ -177,6 +177,8 @@ echo " Installing libfuse2"
 echo "-------------------------------------------------------"
 sudo apt install libfuse2 -y
 echo "-------------------------------------------------------"
+sudo wget -O start_viam_server.sh https://raw.githubusercontent.com/jimTheSTEAMClown/VIAM-Party-Rover-0/main/start_viam_server.sh 
+sudo chmod 755 start_viam_server.sh
 echo " Now you will need to set up the vial-server from your FLEET Page on the VIAM site https://app.viam.com/robots"
 echo "-------------------------------------------------------"
 echo "-------------------------------------------------------"
@@ -194,3 +196,5 @@ echo " (_)\_)(____)(_/\_) (__)   (___/ (__) (____)(__)  (___/ "
 echo " "
 echo "List of next steps: "
 echo " - Now you will need to set up the vial-server from your FLEET Page on the VIAM site https://app.viam.com/robots"
+echo " - Then, maybe run this .sh file ./start_viam_server.sh"
+echo "-------------------------------------------------------"
