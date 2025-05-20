@@ -35,15 +35,9 @@ echo "  create a rover_log direcoty, and log the bach and other commands and scr
 echo "  called rover.log "
 echo "---------------------"
 echo "  List all the stuffs "
-echo "  sudo apt update "
-echo "  sudo apt upgrade -y "
-echo "  sudo lscpu "
-
-echo "----------------------------------------------------"
-echo "Other Useful Stuff To Test For"
-echo "----------------------------------------------------"
-
-echo "    "
+# echo "  sudo apt update "
+# echo "  sudo apt upgrade -y "
+# echo "  sudo lscpu "
 
 echo "----------------------------------------------------"
 select yn in "Yes" "No"; do
