@@ -38,24 +38,11 @@ echo "  List all the stuffs "
 echo "  sudo apt update "
 echo "  sudo apt upgrade -y "
 echo "  sudo lscpu "
-echo "libfuse2 is for the VIAM Server "
-echo "  sudo apt install libfuse2 -y "
-echo "    "
+
 echo "----------------------------------------------------"
 echo "Other Useful Stuff To Test For"
 echo "----------------------------------------------------"
-echo "  sudo apt install arduino -y "
-echo "  sudo apt install git -y "
-echo "  sudo apt install uft -y "
-echo "  sudo apt install net-tools -y  "
-echo "  sudo apt install openssh-server -y  "
-echo "  sudo ufw allow ssh  "
-echo "  Install Google Chrome    "
-echo "  sudo apt install vim -y "
-echo "  sudo apt install thonny -y  "
-echo "  sudo snap install notepad-plus-plus "
-echo "  # Install Visual Studion Code  "
-echo "  sudo snap install --classic code  "
+
 echo "    "
 
 echo "----------------------------------------------------"
@@ -95,7 +82,7 @@ echo "open rover_log.log and log date and time"
 echo "----------------------------------------------------"
 echo " "
 # test if log file is there
-mv rover_log.log rover_log.bac.log
+# mv rover_log.log rover_log.bac.log
 sudo touch rover_log.log
 echo " "
 echo "----------------------------------------------------"
