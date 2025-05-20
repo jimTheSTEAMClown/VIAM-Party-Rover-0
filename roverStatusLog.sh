@@ -35,15 +35,16 @@ echo "  create a rover_log direcoty, and log the bach and other commands and scr
 echo "  called rover.log "
 echo "---------------------"
 echo "  List all the stuffs "
-echo "  sudo apt update "
-echo "  sudo apt upgrade -y "
+# echo "  sudo apt update "
+# echo "  sudo apt upgrade -y "
+echo "  date "
 echo "  sudo lscpu "
 
-echo "----------------------------------------------------"
-echo "Other Useful Stuff To Test For"
-echo "----------------------------------------------------"
+# echo "----------------------------------------------------"
+# echo "Other Useful Stuff To Test For"
+# echo "----------------------------------------------------"
 
-echo "    "
+# echo "    "
 
 echo "----------------------------------------------------"
 select yn in "Yes" "No"; do
@@ -61,16 +62,16 @@ select yn in "Yes" "No"; do
     esac
 done
 # https://docs.viam.com/installation/#detailed-installation-instructions
-cd 
-pwd
+# cd 
+# pwd
 echo "-------------------------------------------------------"
 echo " Uncomment to run update & upgrade "
 echo "-------------------------------------------------------"
 # sudo apt update
 # sudo apt upgrade -y
-echo "-------------------------------------------------------"
-echo " Checking for Rover Dir in $USER home "
-echo "-------------------------------------------------------"
+# echo "-------------------------------------------------------"
+# echo " Checking for Rover Dir in $USER home "
+# echo "-------------------------------------------------------"
 # sudo mkdir rover
 # cd rover
 # sudo mkdir rover_log
@@ -90,12 +91,22 @@ echo "Done Testing For &/or creating the rover_log.log file "
 echo "----------------------------------------------------"
 echo " "
 
-echo "----------------------------------------------------"
-echo "Getting the date & time" | sudo tee -a rover_log.log
 echo "----------------------------------------------------" | sudo tee -a rover_log.log
-echo " "
+echo "Getting the date, time, Rover Stauts & Stuff" | sudo tee -a rover_log.log
+echo "----------------------------------------------------" | sudo tee -a rover_log.log
 sudo date | sudo tee -a rover_log.log
-echo " "
+echo "----------" | sudo tee -a rover_log.log
+sudo echo "Raspberry Pi/Rover Device Hardware Information " | sudo tee -a rover_log.log
+sudo lscpu | sudo tee -a rover_log.log
+sudo echo "list command here" | sudo tee -a rover_log.log
+echo "----------" | sudo tee -a rover_log.log
+echo "Raspberry Pi/Rover Device OS, Apps & Tools Information "" | sudo tee -a rover_log.log
+echo "----------------------------------------------------" | sudo tee -a rover_log.log
+sudo echo "list command here" | sudo tee -a rover_log.log
+echo "----------" | sudo tee -a rover_log.log
+echo "Raspberry Pi/Rover Device External Hardware Information "" | sudo tee -a rover_log.log
+echo "----------------------------------------------------" | sudo tee -a rover_log.log
+sudo echo "list command here" | sudo tee -a rover_log.log
 echo "----------------------------------------------------" | sudo tee -a rover_log.log
 echo "Done getting date & time" | sudo tee -a rover_log.log
 echo " " | sudo tee -a rover_log.log
